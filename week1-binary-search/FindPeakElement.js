@@ -1,0 +1,3 @@
+var findPeakElement = function(nums) {
+    
+};
