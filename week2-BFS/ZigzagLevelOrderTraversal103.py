@@ -8,33 +8,27 @@ class TreeNode:
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
-        if not root:
-            return []
-        
-        queue = deque([(root,1)])
+        queue = deque([root])
         res = []
         while queue:
-            cur,level = queue.popleft()
-            
-            if len(res)<level:
-                res.append([])
-            res[level-1].append(cur.val)
-            if level%2!=0:
-                if cur.left:
-                    queue.insert(0,(cur.left,level+1))
-                if cur.right:
-                    queue.insert(0,(cur.right,level+1))
-            else:
-                if cur.left:
-                    queue.append((cur.left,level+1))
-                if cur.right:
-                    queue.append((cur.right,level+1))
+            r = []   
+            print(queue)
+            for _ in range(len(queue)):
+                q = queue.popleft()
+                if q:
+                    r.append(q.val)
+                    queue.append(q.left)
+                    queue.append(q.right)
+            r = r[::-1] if len(res) % 2==1 else r
+            if r:
+                res.append(r)
         return res
 
 sol = Solution()
-root = TreeNode(3)
-root.left = TreeNode(9)
-root.right = TreeNode(20)
-root.right.left = TreeNode(15)
-root.right.right = TreeNode(7)
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.right.right = TreeNode(5)
+
 print(sol.zigzagLevelOrder(root))
