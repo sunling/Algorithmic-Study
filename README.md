@@ -9,3 +9,6 @@ Homework: LeetCode 103 130 199 210 529 787
 
 # Week3 - DFS [2019-05-04]
 Homework: LeetCode 144 257 79 329 113 Suggested: 695 247
+
+# Week4 - Backtracking [2019-05-11]
+Homework: LeetCode 90 46 63 40 52
