@@ -19,8 +19,7 @@ class Solution:
         if 0 <= i < m and 0 <= j < n and board[i][j] == word[0]:
             c = board[i][j]
             board[i][j] = '*' 
-            for x, y in [(i + 1, j), (i, j + 1), (i - 1, j), (i, j - 1)]:
-                # if true, it means next c found, go on
+            for x, y in [(i + 1, j), (i, j + 1), (i - 1, j), (i, j - 1)]: 
                 if self.dfs(board, m, n, x, y, word[1:]):
                     board[i][j] = c
                     return True
