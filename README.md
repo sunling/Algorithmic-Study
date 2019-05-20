@@ -12,3 +12,6 @@ Homework: LeetCode 144 257 79 329 113 Suggested: 695 247
 
 # Week4 - Backtracking [2019-05-11]
 Homework: LeetCode 90 46 63 40 52
+
+# Week5 - Divide and Conquer [2019-05-18]
+Homework: LeetCode 23 240 241 312 973 Suggested: 4 215 218
