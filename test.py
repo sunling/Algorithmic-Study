@@ -21,8 +21,6 @@
 # s = {(0, 1), (0, 0)}
 # print((0, 0) in s)
 
-<<<<<<< HEAD
-
 # arr = [1, 2, 3] +[4]
 # arr = arr[:-1]
 
@@ -44,18 +42,20 @@
 # res.add([2])
 # print(res)
 
-resset = {(1, 2, 3), (2, 4, 5)}
-resset.add((2, 3, 5))
-resset.add((2, 3, 5))
-print(list(list(resset))
-=======
+# resset = {(1, 2, 3), (2, 4, 5)}
+# resset.add((2, 3, 5))
+# resset.add((2, 3, 5))
+# print(list(list(resset))
+
 # s = set()
 # s.add('a')
 # s.add('A')
 # print(s)
 
 
-arr = [1, 2, 3, 4, 5]
-print(arr[:])
-print(arr[5:])
->>>>>>> 1c3b2831c2b2e9f8ca9fa2e48e3d4eb9fa2880da
+# arr = [1, 2, 3, 4, 5]
+# print(arr[:])
+# print(arr[5:])
+
+print(10 / 5)
+print(10 // 5)
