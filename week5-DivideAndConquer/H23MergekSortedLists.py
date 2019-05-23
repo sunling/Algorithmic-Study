@@ -19,7 +19,7 @@ class Solution:
         return self.merge(l, r)
 
     def merge(self, l, r):
-        dummy = cur = ListNode(0)
+        dummy = cur = ListNode(0) 
         while l and r:
             if l.val < r.val:
                 cur.next = l
@@ -31,17 +31,20 @@ class Solution:
         cur.next = l or r
         return dummy.next
 
+    def printNode(self, listnode):
+        vals = ""''""
+        while listnode:
+            vals += str(listnode.val) + "--"
+            listnode = listnode.next
+        print(vals)
 
 list1 = ListNode(1)
 list1.next = ListNode(4)
 list1.next.next = ListNode(5)
-list2 = ListNode(1)
+list2 = ListNode(2)
 list2.next = ListNode(3)
 list2.next.next = ListNode(4)
 lists = [list1, list2]
 g = Solution()
-
-ans = g.mergeKLists(lists)
-while ans:
-    print(ans.val)
-    ans = ans.next
+ans = g.mergeKLists(lists) 
+g.printNode(ans)
