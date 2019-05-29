@@ -15,3 +15,6 @@ Homework: LeetCode 90 46 63 40 52
 
 # Week5 - Divide and Conquer [2019-05-18]
 Homework: LeetCode 23 240 241 312 973 Suggested: 4 215 218
+
+# Week6 - Dynamic Programming [2019-05-25]
+Homework: LeetCode 53 121 139 152 300 322
