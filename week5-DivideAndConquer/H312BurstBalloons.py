@@ -1,21 +1,25 @@
+from typing import List
+
+
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
-        # 0 ≤ n ≤ 500
-        if not nums:
-            return 0
-        if len(nums) == 1:
-            return nums[0]
-        maxC = 0
-        for i in range(len(nums)):
-            # current num
-            # burst current Balloon, to get how man
-            # 爆破当前气球得到多少coin
-            currC = nums[i]
-            if i - 1 > 0:
-                currC *= nums[i - 1]
-            if i + 1 < len(nums):
-                currC *= nums[i + 1]
+        nums = [1] + nums + [1]
+        cache = [[0] * len(nums) for _ in nums]
 
-                # left
-                # right
-    def helper(nums, res):
+        def burst(i, j):
+            if cache[i][j]:
+                return cache[i][j]
+            coin = 0
+            for k in range(i + 1, j):
+                coin = max(coin, burst(i, k) +
+                           nums[i] * nums[k] * nums[j] + burst(k, j))
+                cache[i][j] = coin
+            return coin
+        return burst(0, len(nums)-1)
+
+
+g = Solution()
+print(g.maxCoins([3, 1, 5, 8]))
+
+# Runtime: 736 ms, faster than 24.07 % of
+# Python3 online submissions for Burst Balloons.
