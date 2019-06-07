@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
         nums = [1] + nums + [1]
@@ -13,11 +15,11 @@ class Solution:
                            nums[i] * nums[k] * nums[j] + burst(k, j))
                 cache[i][j] = coin
             return coin
-        return burst(0, len(nums)-1) 
+        return burst(0, len(nums)-1)
 
 
 g = Solution()
 print(g.maxCoins([3, 1, 5, 8]))
 
-# Runtime: 736 ms, faster than 24.07 % of 
+# Runtime: 736 ms, faster than 24.07 % of
 # Python3 online submissions for Burst Balloons.
