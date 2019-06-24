@@ -21,3 +21,6 @@ Homework: LeetCode 53 121 139 152 300 322
 
 # Week7 - Topological Sort [2019-06-01]
 Homework: LeetCode 207 210 269 444
+
+# Week8 - Bit Manipulation [2019-06-08]
+Homework: LeetCode 169 421 201 342 260 137
